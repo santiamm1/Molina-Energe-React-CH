@@ -1,5 +1,3 @@
-import {Container, Button} from "react-bootstrap"
-
 /* const Main = () => {
     return (
         <main>
@@ -10,12 +8,14 @@ import {Container, Button} from "react-bootstrap"
 } */
 const Main = () => {
     return (
-        <Container as="main" fluid> 
-            Main
-        <Button>Click nuevo</Button>    
-        </Container>  
-
+   /*      <Container as="main" fluid>    
+        <Button>Click nuevo</Button> */
+        /* </Container>  */
+    <div>
+    <span class="material-icons-outlined">shopping_cart_checkout</span>
+    </div>
+    
     )
-}
+}   
 
 export default Main
