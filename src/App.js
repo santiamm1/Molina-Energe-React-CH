@@ -12,9 +12,8 @@ const App = () => {
     return (
         <>
             <Header/> 
-            <ItemListContainer greeting="Hola ¿Cómo estás?"/>  
-            <Container/>
-            <Main/>   
+            <Main/>
+            <Container/>   
             <Footer/>
         </>
     

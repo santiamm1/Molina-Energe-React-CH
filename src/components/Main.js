@@ -1,8 +1,11 @@
+import ItemListContainer  from "./ItemListContainer"
 
 const Main = () => {
     return (
         <main>
-                <p>Este es el cuerpo de mi aplicación</p>
+            <h1>Hola, bienvenido</h1>
+            <ItemListContainer/>
+            
         </main>  
 
     )

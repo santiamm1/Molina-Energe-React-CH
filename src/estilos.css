@@ -31,3 +31,18 @@ nav {
     margin-right: 35px;
     font-family: 'Questrial', sans-serif;
 }
+
+section.class-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+article.card{
+    margin: 10px;
+    padding: 20px;
+    color: #d67c30;
+    text-align: center;
+    border: solid 1px #d67c30;
+    
+}
