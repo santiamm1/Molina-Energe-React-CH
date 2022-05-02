@@ -46,3 +46,11 @@ article.card{
     border: solid 1px #d67c30;
     
 }
+div.card{
+    margin: 10px;
+    padding: 20px;
+    color: #d67c30;
+    text-align: center;
+    border: solid 1px #d67c30;
+    
+}
