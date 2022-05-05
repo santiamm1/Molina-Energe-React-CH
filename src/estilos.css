@@ -30,6 +30,7 @@ nav {
     align-items: center;
     margin-right: 35px;
     font-family: 'Questrial', sans-serif;
+    text-decoration: none;
 }
 
 section.class-container{
@@ -53,4 +54,9 @@ div.card{
     text-align: center;
     border: solid 1px #d67c30;
     
+}
+h1.header__titulo {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
 }
