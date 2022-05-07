@@ -1,17 +1,18 @@
-import Detalles from "./Detalles"
+import {useState} from 'react'
+import Contador from "./ItemCount"
 
-const ItemDetail =({productos})=>{
-   
-    
+const ItemDetail = (producto) => {
+
     return (
-        <section className="class-container">
-            {productos.map(producto=>{
-                return(
-                    <Detalles key={producto.id} producto={producto}/>
-                )
-            })}
-        </section>
+        <article className="card"> 
+            <h2><strong>Detalle de equipos</strong></h2>
+            <h5>Nombre del producto : {producto.nombre}</h5>
+            <h5>Precio : $ {producto.precio}</h5>
+            <img src={producto.imagen} alt=""/>
+            <h5>Categoria : {producto.categorias}</h5>
+            
+        </article>
     )
-}
+} 
 
 export default ItemDetail

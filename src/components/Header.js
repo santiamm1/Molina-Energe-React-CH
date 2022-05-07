@@ -5,9 +5,11 @@ import {Link} from "react-router-dom"
 const Header = () => {
     return (
         <header className="header">
+            
             <Link to="/">
-                <h1 className="header__titulo">Energe-Tienda oficial</h1>
+                <img src="/energe-logo.png" alt="Energe logo"></img>
             </Link>
+       
             <Link to="/carrito">
                 <CartWidget/>
             </Link>
@@ -20,5 +22,4 @@ const Header = () => {
 }
 
 export default Header
-
 
