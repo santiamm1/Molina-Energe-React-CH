@@ -9,35 +9,45 @@ export const productosIniciales = [
         nombre: "Termotanque 90 litros",
         precio: 200000,
         imagen: "https://energe.com.ar/wp-content/uploads/2020/10/TS90s-Front-Sin-fondo.png",
-        categorias: "Termotanques"
+        categorias: "Termotanques",
+        detalles:"Equipo ideal para viviendas de 2 personas",
+        funcionamiento:"Se recomienda para viviendas con suministro de agua presurizada"
     },
     {
         id : 2,
         nombre: "Termotanque 180 litros",
         precio: 250000,
         imagen: "https://energe.com.ar/wp-content/uploads/2020/10/TS180s-Front-Sin-fondo.png",
-        categorias: "Termotanques"
+        categorias: "Termotanques",
+        detalles:"Equipo ideal para viviendas de 4 personas",
+        funcionamiento:"Se recomienda para viviendas con suministro de agua presurizada"
     },
     {
         id : 3,
         nombre: "Kit Inyección Micro 2/120",
         precio: 300000,
         imagen: "https://http2.mlstatic.com/D_NQ_NP_652157-MLA32722495837_102019-O.webp",
-        categorias: "Fotovoltaicos"
+        categorias: "Fotovoltaicos",
+        detalles:"Equipo ideal para viviendas de consumos moderados",
+        funcionamiento:"Se coloca el equipo directamete en serie con el tablero eléctrico del domicilio"
     },
     {
         id : 4,
         nombre: "Kit Inyección Micro 4/240",
         precio: 350000,
         imagen: "https://http2.mlstatic.com/D_NQ_NP_652157-MLA32722495837_102019-O.webp",
-        categorias: "Fotovoltaicos"
+        categorias: "Fotovoltaicos",
+        detalles:"Equipo ideal para viviendas de consumos medianos",
+        funcionamiento:"Se coloca el equipo directamete en serie con el tablero eléctrico del domicilio"
     },
     {
         id : 5,
         nombre: "Kit bombeo solar",
         precio: 450000,
         imagen: "https://http2.mlstatic.com/D_NQ_NP_684282-MLA45117746834_032021-O.webp",
-        categorias: "Campo"
+        categorias: "Campo",
+        detalles:"Equipo ideal para viviendas de campo",
+        funcionamiento:"Se recomienda usarlo con caudales de agua relativamente bajos"
     },
 ]
 

@@ -10,14 +10,23 @@ const ItemDetailContainer =()=>{
     const[producto, setProducto]= useState({})
     const {id}=useParams()
 
-    console.log({id})
-
+    
     useEffect(()=>{
         
-        console.log("Pido detalle de un solo producto :",id)
-        
-        const detalleProducto = productosIniciales.filter((producto)=>{return producto.id === id})
+        console.log("Pido el producto con id:",id)
+        console.log("Tengo los productos iniciales:", productosIniciales)
+        const detalleProducto = productosIniciales.filter((producto)=>{
+            return producto.id == id
+        })[0]
+
         console.log(detalleProducto)
+        setProducto(detalleProducto)
+        setCargando(false)   
+    
+    
+    
+        /*const detalleProducto = productosIniciales.filter((producto)=>{return producto.id === id})
+        console.log(detalleProducto)*/
        
         
         const pedidoDeDetalle = new Promise ((res)=>{
@@ -42,7 +51,7 @@ const ItemDetailContainer =()=>{
     } else{
         return (
             <>
-             <ItemDetail key={producto.id} producto={producto}/>
+              <ItemDetail producto={producto}/> 
             </>
         )
     }

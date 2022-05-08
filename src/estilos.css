@@ -61,6 +61,9 @@ span.material-symbols-outlined{
     color: #d67c30;
     font-size: 40px;
     border: #d67c30 1px solid;
-    
-    
+     
+}
+
+p,h2,h3{
+font-family: 'Questrial', sans-serif;
 }
