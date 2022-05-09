@@ -12,22 +12,11 @@ const ItemDetailContainer =()=>{
 
     
     useEffect(()=>{
-        
-        console.log("Pido el producto con id:",id)
-        console.log("Tengo los productos iniciales:", productosIniciales)
-        const detalleProducto = productosIniciales.filter((producto)=>{
-            return producto.id == id
-        })[0]
 
-        console.log(detalleProducto)
-        setProducto(detalleProducto)
-        setCargando(false)   
+        const detalleProducto = productosIniciales.find((producto)=>{
+            return producto.id == id
+        })
     
-    
-    
-        /*const detalleProducto = productosIniciales.filter((producto)=>{return producto.id === id})
-        console.log(detalleProducto)*/
-       
         
         const pedidoDeDetalle = new Promise ((res)=>{
             setTimeout(()=>{
@@ -35,13 +24,12 @@ const ItemDetailContainer =()=>{
             },2000)
            })
            
-           pedidoDeDetalle 
-           .then(()=>{
-               setCargando(false)
-               setProducto(detalleProducto)
-           })
+            pedidoDeDetalle 
+            .then(()=> setProducto(detalleProducto))
+            .catch(err=>err)
+            .finally(()=> setCargando(false))
            
-    },[id, producto.id])
+    },[id])
 
    
     if(cargando){

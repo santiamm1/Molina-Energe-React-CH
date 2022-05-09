@@ -1,6 +1,6 @@
 import { useState , useEffect } from "react"
 
-const Contador = ({init,stock, onAdd}) =>{
+const Contador = ({init,stock, onClick}) =>{
 
     const [contador, setContador] = useState(init, stock)
     
@@ -15,17 +15,17 @@ const Contador = ({init,stock, onAdd}) =>{
     }
 
     const confirmar = () =>{
-        console.log({stock})
-        onAdd(contador)
+        console.log({contador})
+        onClick(contador)
     }
 
 
 if(contador <= stock){
     return(
         <div>
-            <p>Unidades: {contador}</p>
+            <p><strong>Unidades:</strong> {contador}</p>
             <button onClick={sumar} className="material-icons">add</button> 
-            <button onClick={confirmar}>Confirmar</button> 
+            <button onClick={confirmar}class="btn btn-secondary">Confirmar</button> 
             <button onClick={restar} className="material-icons">remove</button> 
         </div>
     )

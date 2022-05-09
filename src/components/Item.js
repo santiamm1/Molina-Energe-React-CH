@@ -13,10 +13,10 @@ const Item = ({producto}) => {
 }
     return (
         <article className="card">
-            <h3>{producto.nombre}</h3>
+            <h3><strong>{producto.nombre}</strong></h3>
             <img src={producto.imagen} alt="card" width="300px"/>
-            <p>Precio: $ {producto.precio}</p>
-            <Link to={`/item/${producto.id}`} key={producto.id}><button>Detalles</button></Link>
+            <p><strong>Precio: $ {producto.precio}</strong></p>
+            <Link to={`/item/${producto.id}`} key={producto.id}><button>Ver Detalles</button></Link>
            
             
 

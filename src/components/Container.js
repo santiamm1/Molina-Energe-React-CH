@@ -7,7 +7,8 @@ const Container = () => {
     }
 
     return (
-    <Contador stock={10} init={0} onAdd={onAdd}/>   
+  /*   <Contador stock={10} init={0} onAdd={onAdd}/> */  
+        <></>
     )
 
 }
