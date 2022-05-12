@@ -1,47 +1,58 @@
-import { useState , useEffect } from "react"
+import { useState } from "react";
 
-const Contador = ({init,stock, onClick}) =>{
+const ItemCount = ({ init, stock, onAdd , onCount}) => {
+  const [contador, setContador] = useState(init);
+  const [confirmado, setConfirmado] = useState(false);
 
-    const [contador, setContador] = useState(init, stock)
-    
-    /* useEffect() */
-
-    const sumar =() => {
-        setContador(contador+1)
+  const sumar = () => {
+    if (contador < stock) {
+      setContador(contador + 1);
+    } else {
+      alert("No tenemos mas stock");
     }
+  };
 
-    const restar =() => {
-        setContador(contador-1)
-    }
+  const restar = () => {
+    if (contador > 1) setContador(contador - 1);
+  };
 
-    const confirmar = () =>{
-        console.log({contador})
-        onClick(contador)
-    }
+  const confirmar = () => {
+    /*onAdd(contador); */   
+    console.log(contador);
+    setConfirmado(true);
+  };
 
+  const cerrarConfirmado = () => {
+    /*onCount()*/
+    setConfirmado(false);
+  };
 
-if(contador <= stock){
-    return(
-        <div>
-            <p><strong>Unidades:</strong> {contador}</p>
-            <button onClick={sumar} className="material-icons">add</button> 
-            <button onClick={confirmar}class="btn btn-secondary">Confirmar</button> 
-            <button onClick={restar} className="material-icons">remove</button> 
+  if (!confirmado) {
+    return (
+      <div>
+        <div className="row justify-content-center">
+          <button onClick={sumar} className="material-icons botonSuma btn-secondary">add</button>
+          <p><strong>Unidades a comprar :</strong> {contador}</p>
+          <button onClick={restar} className="material-icons botonSuma btn-secondary">remove</button>
         </div>
-    )
-    }
-    else{
-    return(
-        <div>
-            <p>No hay más stock</p>
-            <button onClick={confirmar}>Reservar producto</button> 
-            <button onClick={restar} className="material-icons">remove</button> 
+        <button onClick={confirmar} className="botonSuma btn-secondary">Confirmar</button>
+    </div>
+    );
+  } else {
+    return (
+      <div>
+        <div className="">
+          <button onClick={sumar} className="material-icons botonSuma btn-secondary">add</button>
+          <p className="cantidad">Unidades a comprar : {contador}</p>
+          <button onClick={restar}className="material-icons botonSuma btn-secondary">remove</button>
         </div>
-    )
-    }
-
-    
-
-}
-
-export default Contador
+        <button onClick={confirmar} className="botonSuma btn-secondary">Confirmar</button>
+        <p>
+          Se confirmaron {contador} unidades!
+         <button onClick={cerrarConfirmado}>Cerrar</button>
+        </p>
+      </div>
+    );
+  }
+};
+export default ItemCount;
