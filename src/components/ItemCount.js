@@ -30,12 +30,15 @@ const ItemCount = ({ init, stock, onAdd , onCount}) => {
   if (!confirmado) {
     return (
       <div>
-        <div className="row justify-content-center">
+        <div className="">
           <button onClick={sumar} className="material-icons botonSuma btn-secondary">add</button>
           <p><strong>Unidades a comprar :</strong> {contador}</p>
           <button onClick={restar} className="material-icons botonSuma btn-secondary">remove</button>
         </div>
+        <div>
         <button onClick={confirmar} className="botonSuma btn-secondary">Confirmar</button>
+        </div>
+        
     </div>
     );
   } else {
@@ -43,14 +46,16 @@ const ItemCount = ({ init, stock, onAdd , onCount}) => {
       <div>
         <div className="">
           <button onClick={sumar} className="material-icons botonSuma btn-secondary">add</button>
-          <p className="cantidad">Unidades a comprar : {contador}</p>
+          <p className="cantidad"><strong>Unidades a comprar :</strong> {contador}</p>
           <button onClick={restar}className="material-icons botonSuma btn-secondary">remove</button>
         </div>
         <button onClick={confirmar} className="botonSuma btn-secondary">Confirmar</button>
-        <p>
-          Se confirmaron {contador} unidades!
-         <button onClick={cerrarConfirmado}>Cerrar</button>
+        <div id="confirmacion_bloque">
+        <p id="confirmacion"><strong>Se confirmaron: {contador} unidades!</strong>
+        <button onClick={cerrarConfirmado} className="botonSuma btn-secondary m-1">Cerrar</button>
         </p>
+        </div>
+     
       </div>
     );
   }

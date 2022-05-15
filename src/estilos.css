@@ -67,3 +67,20 @@ span.material-symbols-outlined{
 p,h2,h3{
 font-family: 'Questrial', sans-serif;
 }
+p#confirmacion{
+    background-color: rgb(218, 212, 212);
+    width: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: #d67c30 solid 1px;
+}
+div#confirmacion_bloque{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+    
+
+}
