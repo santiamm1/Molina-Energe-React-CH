@@ -42,7 +42,7 @@ export const CustomProvider = ({ defaultValue = [], children }) => {
   };
 
   return (
-    <Provider value={{ cart, addItem, clearCart, removeItem }}>
+    <Provider value={{ cart, addItem, clearCart, removeItem, isInCart }}>
       {children}
     </Provider>
   );

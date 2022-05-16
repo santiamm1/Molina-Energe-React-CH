@@ -8,7 +8,7 @@ const ItemCount = ({ init, stock, onAdd , onCount}) => {
     if (contador < stock) {
       setContador(contador + 1);
     } else {
-      alert("No tenemos mas stock");
+      alert("Stock no disponible");
     }
   };
 
@@ -17,13 +17,14 @@ const ItemCount = ({ init, stock, onAdd , onCount}) => {
   };
 
   const confirmar = () => {
-    /*onAdd(contador); */   
-    console.log(contador);
-    setConfirmado(true);
-  };
+
+    onAdd(contador);
+    setConfirmado(true)
+    
+    };
 
   const cerrarConfirmado = () => {
-    /*onCount()*/
+    onCount()
     setConfirmado(false);
   };
 

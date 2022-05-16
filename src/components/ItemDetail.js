@@ -55,7 +55,7 @@ if(!verContador) {
                  </div>
         </div>
         </div>        
-        <Hijo init={1} onAdd={onAdd} onCount={funcionVerContador}/>
+        <ItemCount  stock ={10} init={0} onAdd={onAdd} onCount={funcionVerContador}/>
         
         <Link to="/carrito"><button className="btn-secondary">Finalizar compra</button>
         </Link>

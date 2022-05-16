@@ -82,5 +82,44 @@ div#confirmacion_bloque{
     justify-content: center;
     margin: 5px;
     
+}
+
+
+div.itemCarrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    color: #d67c30;
+    border: #d67c30 solid 1px;
+    margin: 10px;
+    padding: 20px;
+
+}
+img#imagen-carrito {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h2#carritoCompras {
+    text-align: center;
+    color: #d67c30;
+    padding: 20px;
+}
+h3#precioTotal {
+    text-align: center;
+    color: #d67c30;
+    padding: 20px;
+
+}
+div.botoneraFinal {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 
 }
