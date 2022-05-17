@@ -7,11 +7,11 @@ const CartWidget = () => {
     const {cart} = useContext(cartContext)
     console.log(cart)
     return (
-    <div>
+    <div className="seccionCarrito">
         <span className="material-symbols-outlined">
         shopping_cart
         </span>
-        {cart.length}
+        <p className='indicador'>{cart.length}</p>
     </div>
     
     )

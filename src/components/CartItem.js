@@ -13,15 +13,18 @@ const {removeItem,cart} = useContext(cartContext);
 const valor = carro.item.precio * carro.quantity;
 
 
+
+
+
   return (
    
       
 <div className="itemCarrito">
+          <h2><strong>{carro.item.nombre}</strong></h2>
           <img id="imagen-carrito" src={carro.item.imagen} alt="" title=""/>
-          <p><strong>{carro.item.nombre}</strong></p>
-          <input type="number"  value={carro.quantity}/>
-          <h3>${valor}</h3>
-          <button  className="borrarItem">Eliminar</button>
+          <input  type="number"  value={carro.quantity}/>
+          <h3>Precio: ${valor}</h3>
+          <button  className="borrarItem">Eliminar</button>      
 </div>
   
   )

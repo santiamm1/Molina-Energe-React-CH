@@ -19,7 +19,7 @@ const ItemDetail = ({producto}) => {
     const onAdd = (quantity) => {
         setCartItems(quantity);
         addItem(producto, quantity);
-        console.log("Click del padre");
+        console.log("Producto confirmado correctamente");
       }
 
       const funcionVerContador = () => {

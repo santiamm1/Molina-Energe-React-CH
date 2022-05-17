@@ -60,7 +60,6 @@ div.card{
 span.material-symbols-outlined{
     color: #d67c30;
     font-size: 40px;
-    border: #d67c30 1px solid;
      
 }
 
@@ -114,6 +113,25 @@ h3#precioTotal {
     padding: 20px;
 
 }
+
+div.seccionCarrito {
+    border: #d67c30 solid 1px;
+    display: flex;
+    flex-direction: row;
+    
+}
+p.indicador{
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #d67c30;
+    margin-top: 10px;
+    text-align: center;
+ 
+}
+
 div.botoneraFinal {
     
     display: flex;
@@ -122,4 +140,13 @@ div.botoneraFinal {
     align-items: center;
     padding: 20px;
 
+}
+div.carritoVacio {
+    text-align: center;
+    color: #8b8b8b;
+    padding: 15px;
+
+}
+a.linksCarrito {
+    text-decoration: none;
 }

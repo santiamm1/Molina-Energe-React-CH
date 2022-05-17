@@ -10,7 +10,7 @@ const Header = () => {
                 <img src="/energe-logo.png" alt="Energe"></img>
             </Link>
        
-            <Link to="/carrito">
+            <Link to="/carrito" className="linksCarrito">
                 <CartWidget/>
             </Link>
             
