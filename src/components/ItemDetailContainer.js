@@ -2,7 +2,10 @@ import { useEffect, useState } from "react"
 import { productosIniciales } from "./ItemListContainer"
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
+import {db} from "./firebase"
+import {collection,getDoc,doc,getDocs,addDoc} from "firebase/firestore"
  
+
 
 const ItemDetailContainer =()=>{
 
@@ -17,7 +20,7 @@ const ItemDetailContainer =()=>{
             return producto.id == id
         })
     
-        
+     
         const pedidoDeDetalle = new Promise ((res)=>{
             setTimeout(()=>{
                res(detalleProducto)

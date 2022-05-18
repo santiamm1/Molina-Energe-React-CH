@@ -1,6 +1,8 @@
 import { useEffect,useState } from "react"
 import { useParams } from "react-router-dom"
 import Itemlist from "./ItemList"
+import {db} from "./firebase"
+import {collection,getDoc,doc,getDocs,addDoc} from "firebase/firestore"
 
 
 export const productosIniciales = [
@@ -55,14 +57,35 @@ const ItemListContainer = () => {
     
     const [cargando,setCargando]  = useState(true) 
     const [productos,setProductos]  = useState([]) 
-    const {nombreCategoria} = useParams()
+    const {nombreCategoria,test} = useParams()
 
     
     
 
     useEffect (()=>{
 
-        if(nombreCategoria==undefined){
+        const productosCollection = collection(db,"productos")
+        const consulta = getDocs(productosCollection)
+
+        consulta
+        .then((resultado)=>{
+                const productos = resultado.docs.map(doc => {
+                return  doc.data()
+                })
+
+                setProductos(productos)
+                setCargando (false)
+         })        
+        .catch((error)=>{
+        
+        })
+        .finally(()=>{
+
+        })
+    })    
+
+
+        /*if(nombreCategoria==undefined){
 
                 const pedido = new Promise ((res)=>{
                 setTimeout(()=>{
@@ -100,7 +123,7 @@ const ItemListContainer = () => {
       
           }
       
-        },[nombreCategoria])   
+        },[nombreCategoria])   */
 
     if(cargando){
         return(
