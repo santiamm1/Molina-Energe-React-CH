@@ -6,12 +6,12 @@ import {getFirestore} from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDATB6DLjY-0uDgmZCI-1JvGWVMJrmm0Wg",
-  authDomain: "molina-energe-ch-react.firebaseapp.com",
-  projectId: "molina-energe-ch-react",
-  storageBucket: "molina-energe-ch-react.appspot.com",
-  messagingSenderId: "286085486357",
-  appId: "1:286085486357:web:a527dac7c8f5a611e27b1c"
+  apiKey: "AIzaSyA-vScAh8EnRlLR2ie0ZtWUrjm03E3UXpM",
+  authDomain: "molina-energe-ch-react-929d1.firebaseapp.com",
+  projectId: "molina-energe-ch-react-929d1",
+  storageBucket: "molina-energe-ch-react-929d1.appspot.com",
+  messagingSenderId: "1063146894220",
+  appId: "1:1063146894220:web:4aadda8ee7a8f547e31ca9"
 };
 
 // Initialize Firebase
