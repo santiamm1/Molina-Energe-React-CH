@@ -1,36 +1,34 @@
 import { useEffect, useState } from "react"
-import { productosIniciales } from "./ItemListContainer"
+//import { productosIniciales } from "./ItemListContainer"
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
 import {db} from "./firebase"
-import {collection,getDoc,doc,getDocs,addDoc} from "firebase/firestore"
+import {collection,query,where, getDocs} from "firebase/firestore"
  
 
 
-const ItemDetailContainer =()=>{
-
-    const[cargando, setCargando] = useState(true)
-    const[producto, setProducto]= useState({})
-    const {id}=useParams()
+const ItemDetailContainer = () => {
+    const [producto , setProducto] = useState([]);
+    const [cargando , setCargando] = useState(true);
+    const {id} = useParams();
 
     
     useEffect(()=>{
 
-        const detalleProducto = productosIniciales.find((producto)=>{
-            return producto.id == id
+        const productosCollection = collection(db,'productos');
+        const data = query(productosCollection,where('id','==',id));
+        const datos = getDocs(data)
+        datos
+        .then((resultado)=>{
+          const result = resultado.docs.map(res => res.data()
+            )
+            
+            setCargando(false)
+            setProducto(result)
         })
+        .catch((error)=>{})
+        .finally(()=>{})
     
-     
-        const pedidoDeDetalle = new Promise ((res)=>{
-            setTimeout(()=>{
-               res(detalleProducto)
-            },2000)
-           })
-           
-            pedidoDeDetalle 
-            .then(()=> setProducto(detalleProducto))
-            .catch(err=>err)
-            .finally(()=> setCargando(false))
            
     },[id])
 
