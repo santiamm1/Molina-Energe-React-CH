@@ -3,14 +3,6 @@ import { useState} from "react"
 
 const Item = ({producto}) => {
 
-    const [detalles,setDetalles] = useState(false)
-
-    const detallesPrductos = () => {
-    console.log(producto.id)
-
-    setDetalles(true)
-
-}
     return (
         <article className="card">
             <h3><strong>{producto.nombre}</strong></h3>

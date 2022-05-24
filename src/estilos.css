@@ -150,3 +150,58 @@ div.carritoVacio {
 a.linksCarrito {
     text-decoration: none;
 }
+
+.seccionFormulario {
+display: flex;
+flex-direction: row;
+justify-content: center;
+color: #d67c30;
+
+
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 30px;
+    width: 500px;
+    border: #d67c30 solid 1px;
+    margin: 20px;
+    font-family: 'Questrial', sans-serif;
+}
+input {
+    border: #d67c30 solid 1px;
+    padding: 10px;
+    font-family: 'Questrial', sans-serif;
+    color: #8b8b8b;
+}
+input:hover {
+    border: #d67c30 solid 1px;
+}    
+.btn-pagar{
+    background-color: #d67c30;
+    padding: 20px;
+    margin-top: 20px;
+    color: #e0e0e0;
+    font-family: 'Questrial', sans-serif;
+
+}
+.seccionCompra{
+    width: 500px;
+    border: #d67c30 solid 1px;
+    margin: 20px;
+    font-family: 'Questrial', sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2#agradecimientoCompra{
+
+    text-align: center;
+}
+.seccionCompraFinal{
+    color: #8b8b8b;
+    text-align: center;
+}

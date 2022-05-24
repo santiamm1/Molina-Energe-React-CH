@@ -11,7 +11,7 @@ const ItemListContainer = () => {
     
     const [cargando,setCargando]  = useState(true) 
     const [productos,setProducto]  = useState([]) 
-    const {nombreCategoria,test} = useParams();
+    const {nombreCategoria,id} = useParams();
 
     
     
@@ -24,7 +24,9 @@ const ItemListContainer = () => {
     
         datos
         .then((resultado)=>{
-            const result = resultado.docs.map(res => res.data()
+            const result = resultado.docs.map(doc => {
+                return {...doc.data(),id: doc.id}
+            }
             )
             setCargando(false)
             setProducto(result)
@@ -36,11 +38,15 @@ const ItemListContainer = () => {
            const productosCollection = collection(db,"productos");
            const data = query(productosCollection,where('categorias','==',nombreCategoria));
            const datos = getDocs(data)
+
+           console.log(datos)
         datos
         .then((resultado)=>{
-          const result = resultado.docs.map(res => res.data()
+            const result = resultado.docs.map(doc => {
+                return {...doc.data(),id: doc.id}
+            }
             )
-            
+            console.log(result)
             setCargando(false)
             setProducto(result)
         })
@@ -105,8 +111,7 @@ const ItemListContainer = () => {
     } else{
         return (
             <Itemlist productos={productos}/> 
-        )
-    }
+        )}
 }
 
 export default ItemListContainer

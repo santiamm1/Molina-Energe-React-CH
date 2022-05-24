@@ -1,16 +1,15 @@
 import {useState} from 'react'
 import {useContext} from 'react'
 import Contador from "./ItemCount"
-import { productosIniciales } from "./ItemListContainer"
-import Hijo from "./Hijo"
 import { cartContext } from "./cartContext";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
 
+
 const ItemDetail = ({producto}) => { 
     
-    const [nombre, setNombre] = useState("");
+
     const [cartItems, setCartItems] = useState(0);
     const {addItem} = useContext(cartContext);
     const [verContador, setVerContador] = useState(false)
@@ -20,6 +19,7 @@ const ItemDetail = ({producto}) => {
         setCartItems(quantity);
         addItem(producto, quantity);
         console.log("Producto confirmado correctamente");
+        
       }
 
       const funcionVerContador = () => {
@@ -38,10 +38,10 @@ if(!verContador) {
                 </div>
          </div>
          <div className="col-sm-6">
+           
                 <h2><strong>{producto.nombre}</strong></h2> 
                 <p><strong>Detalles: </strong>{producto.detalles}</p>
                 <p><strong>Funcionamiento: </strong>{producto.funcionamiento}</p>
-                <p><strong>Kit: </strong>{producto.kit}</p>
                 <h3><strong>Precio:$</strong> {producto.precio}</h3>
                 <img src="https://www.nopcommerce.com/images/thumbs/0006813_mercadopago-checkout-latam-tecnofin.png" width="200px"></img>
          </div>
@@ -61,7 +61,8 @@ if(!verContador) {
         </Link>
       </article>
     );
-  } else {
+  }
+    else {
       return(
       <article className="card cardDetail">
        
@@ -76,7 +77,6 @@ if(!verContador) {
                 <h2><strong>{producto.nombre}</strong></h2> 
                 <p><strong>Detalles: </strong>{producto.detalles}</p>
                 <p><strong>Funcionamiento: </strong>{producto.funcionamiento}</p>
-                <p><strong>Kit: </strong>{producto.kit}</p>
                 <h3><strong>Precio:$</strong> {producto.precio}</h3>
                 <img src="https://www.nopcommerce.com/images/thumbs/0006813_mercadopago-checkout-latam-tecnofin.png" width="200px"></img>
          </div>

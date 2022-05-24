@@ -38,7 +38,7 @@ const Cart = () => {
               </button>
               <Link to="/"><button className="volverInicio">{cart.length === 0 ? "Ir a Comprar" : "Continuar comprando"}</button>
               </Link>
-              <button className="finalizarCompra">Finalizar Compra</button>
+              <Link to="/productos/finalizarCompra"><button className="finalizarCompra">Finalizar Compra</button></Link>
               </div>  
               
             
