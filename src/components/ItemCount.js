@@ -20,7 +20,7 @@ const ItemCount = ({ init, stock, onAdd , onCount}) => {
 
     onAdd(contador);
     console.log(contador);
-    setConfirmado(true);
+    setConfirmado(false);
     
     };
 

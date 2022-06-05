@@ -1,13 +1,25 @@
 import CartList from "./CartList";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { cartContext } from "./cartContext";
-import { useState } from "react";
-import {db} from "./firebase";
+
+
 
 const Cart = () => {
   const { cart, clearCart } = useContext(cartContext);
+  const [precioTotal,setPrecioTotal]= useState()
 
+useEffect(()=>{
+    let resultado=0;
+   for(const carro of cart){
+     
+     let final = carro.quantity * carro.item.precio;
+     resultado += final
+   }
+ 
+  setPrecioTotal(resultado)
+ 
+ },[cart])
 
 
 
@@ -27,22 +39,15 @@ const Cart = () => {
     
             <div className="botoneraFinal">
 
-            <h3 id="precioTotal"><strong>Precio Total:</strong></h3>  
+            <h3 id="precioTotal"><strong>Precio Total:$ {precioTotal}</strong></h3>  
               <div>
-              <button 
-              onClick={() => {
-                clearCart();
-                }} 
-                className="vaciarCart">
-              Vaciar Carrito
-              </button>
+              <button  onClick={() => {clearCart()}}>Vaciar Carrito</button>
               <Link to="/"><button className="volverInicio">{cart.length === 0 ? "Ir a Comprar" : "Continuar comprando"}</button>
               </Link>
               <Link to="/productos/finalizarCompra"><button className="finalizarCompra">Finalizar Compra</button></Link>
               </div>  
               
-            
-              
+                        
             </div>
           </div>
         </div>

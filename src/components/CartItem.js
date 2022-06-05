@@ -1,12 +1,12 @@
 import React from 'react'
 import { useContext } from 'react'
 import { cartContext } from './cartContext'
-import {useState} from 'react'
+
 
 
 const CartItem = ({carro}) => {
 
-const {removeItem,cart} = useContext(cartContext);
+const {removeItem} = useContext (cartContext);
 
 
 
@@ -24,7 +24,7 @@ const valor = carro.item.precio * carro.quantity;
           <img id="imagen-carrito" src={carro.item.imagen} alt="" title=""/>
           <input  type="number"  value={carro.quantity}/>
           <h3>Precio: ${valor}</h3>
-          <button  className="borrarItem">Eliminar</button>      
+          <button  className="borrarItem" onClick={()=>{removeItem(carro.item.id)}}>Eliminar</button>      
 </div>
   
   )
