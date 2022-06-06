@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react"
-//import { productosIniciales } from "./ItemListContainer"
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
 import {db} from "./firebase"
-import {collection,query,where, getDoc,doc} from "firebase/firestore"
+import {getDoc,doc} from "firebase/firestore"
  
 
 
@@ -12,8 +11,18 @@ const ItemDetailContainer = () => {
     const [cargando , setCargando] = useState(true);
     const {id} = useParams();
 
+    useEffect(() => {
     
-    useEffect(()=>{
+        const referenciaItems = doc(db, "productos", id);
+        const datos = getDoc(referenciaItems);
+        datos
+          .then((resultado) => {
+            if(resultado.exists()){
+            setCargando(false);
+            setProductos({id:resultado.id, ...resultado.data()})
+            };
+          })
+    /*useEffect(()=>{
 
         const productosCollection = collection (db,"productos");
         const resultadoDelDoc = doc(productosCollection,id)
@@ -26,13 +35,14 @@ const ItemDetailContainer = () => {
             setProductos(resultado.data())
             setCargando(false)
             
-        })
+        })*/
+
         .catch((error)=>{})
         .finally(()=>{})
         
         
            
-    },[id])
+    },[id]);
 
    
     if(cargando){

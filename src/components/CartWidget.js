@@ -1,10 +1,10 @@
 import {useContext} from "react"
-import {cartContext} from "./cartContext"
+import {contexto} from "./AppContext"
 
 
 const CartWidget = () => {
     
-    const {cart} = useContext(cartContext)
+    const {cart} = useContext(contexto)
     console.log(cart)
     return (
     <div className="seccionCarrito">

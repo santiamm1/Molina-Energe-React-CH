@@ -1,3 +1,5 @@
+
+
 header {
     background-color: #e0e0e0;
     display: flex;
@@ -15,7 +17,6 @@ footer {
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    
 }
 
 a {
@@ -63,7 +64,7 @@ span.material-symbols-outlined{
      
 }
 
-p,h2,h3{
+p,h2,h3,h4,h5{
 font-family: 'Questrial', sans-serif;
 }
 p#confirmacion{
@@ -83,19 +84,24 @@ div#confirmacion_bloque{
     
 }
 
-
-div.itemCarrito{
+/*CartItem*/
+div.DetalleCarrito{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 5px;
-    color: #d67c30;
+    margin: 15px 65px 15px 65px; 
+    color: gray;
     border: #d67c30 solid 1px;
-    margin: 10px;
     padding: 20px;
-
+}    
+div.contenedorCarrito{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 img#imagen-carrito {
     width: 300px;
     display: flex;
@@ -204,4 +210,11 @@ h2#agradecimientoCompra{
 .seccionCompraFinal{
     color: #8b8b8b;
     text-align: center;
+}
+button {
+    background-color: #d67c30;
+    padding: 10px;
+    color: #e0e0e0;
+    font-family: 'Questrial', sans-serif;
+    border: #d67c30 solid 1px;
 }

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { db } from "./firebase";
 import { addDoc, collection } from 'firebase/firestore';
 import { useContext } from 'react';
-import { cartContext } from "./cartContext";
+import { contexto } from "./AppContext";
 import {Link} from 'react-router-dom'
 
 
@@ -15,7 +15,7 @@ const FinalCompra = () => {
     const [precioTotal,setPrecioTotal] = useState();
     const [idReferencia,setIdReferencia] = useState();
     const [mostrar,setMostrar]=useState(true)
-    const {cart,clearCart} = useContext(cartContext)
+    const {cart,clearCart} = useContext(contexto)
 
     useEffect(()=>{
         let result=0;

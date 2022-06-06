@@ -1,12 +1,12 @@
 import CartList from "./CartList";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { cartContext } from "./cartContext";
+import { contexto } from "./AppContext";
 
 
 
 const Cart = () => {
-  const { cart, clearCart } = useContext(cartContext);
+  const { cart, clearCart } = useContext(contexto);
   const [precioTotal,setPrecioTotal]= useState()
 
 useEffect(()=>{

@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import {useContext} from 'react'
 import Contador from "./ItemCount"
-import { cartContext } from "./cartContext";
+import { contexto } from "./AppContext";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,7 @@ const ItemDetail = ({producto}) => {
     
 
     const [cartItems, setCartItems] = useState(0);
-    const {addItem} = useContext(cartContext);
+    const {addItem} = useContext(contexto);
     const [verContador, setVerContador] = useState(false)
 
 
