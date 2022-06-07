@@ -39,7 +39,10 @@ useEffect(()=>{
     
             <div className="botoneraFinal">
 
-            <h3 id="precioTotal"><strong>Precio Total:$ {precioTotal}</strong></h3>  
+            <h3 id="precioTotal"><strong>Precio Total:$ {precioTotal}</strong></h3> 
+            <p>Te recordamos que las operaciones por el canal e-commerce tienen 5 días hábiles para procesamiento.</p>
+            <p>Cualquier eventualidad durante el proceso. <strong>Por favor enviar el reclamo a ventas@energe.com.ar</strong></p>
+            
               <div>
               <button  onClick={() => {clearCart()}}>Vaciar Carrito</button>
               <Link to="/"><button className="volverInicio">{cart.length === 0 ? "Ir a Comprar" : "Continuar comprando"}</button>

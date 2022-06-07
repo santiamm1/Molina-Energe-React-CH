@@ -4,6 +4,7 @@ const ItemList =({productos})=>{
    
     
     return (
+      
         <section className="class-container">
             {productos.map(producto=>{
                 return(

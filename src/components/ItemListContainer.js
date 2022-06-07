@@ -3,6 +3,19 @@ import { useParams } from "react-router-dom"
 import Itemlist from "./ItemList"
 import {db} from "./firebase"
 import {collection,query,where,getDocs} from "firebase/firestore"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+ 
+toast.success('Cargando productos', {
+    position: "top-center",
+    autoClose: 2,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
 
 
 
@@ -63,50 +76,10 @@ const ItemListContainer = () => {
     
       },[nombreCategoria])
 
-
-        /*if(nombreCategoria==undefined){
-
-                const pedido = new Promise ((res)=>{
-                setTimeout(()=>{
-                    res(productosIniciales)
-                },2000)
-                })
-                
-                pedido
-                .then(()=>{
-                    setCargando(false)
-                    setProductos(productosIniciales)
-                })
-                
-        
-        }else{
-            console.log("Solicito los productos de la categoria :",nombreCategoria)                
-
-            const productosFiltrados = productosIniciales.filter(categoria=>categoria.categorias === nombreCategoria)
-
-            console.log(productosFiltrados)
-      
-      
-            const pedidoPorCategorias = new Promise ((res)=>{
-              setTimeout(()=>{
-              res(productosFiltrados)
-              },2000)
-            })
-        
-            pedidoPorCategorias
-              .then(()=>{
-                setCargando(false)
-                setProductos(productosFiltrados)
-               
-              })
-      
-          }
-      
-        },[nombreCategoria])   */
-
     if(cargando){
         return(
-            <p>Cargando...</p>
+            <ToastContainer/>
+            
         )
     } else{
         return (

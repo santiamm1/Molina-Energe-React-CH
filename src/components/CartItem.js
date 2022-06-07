@@ -32,8 +32,8 @@ const valorFinanciado= valor/12;
 
 
       <div className="contenedorCarrito">
-          <h4><strong>Cantidad:</strong> {carro.quantity} unidad/es</h4>
-          <h4><strong>Precio</strong>: ${valor}</h4>
+          <h5><strong>Cantidad:</strong> {carro.quantity} unidad/es</h5>
+          <h5><strong>Precio</strong>: ${valor}</h5>
           <p><strong>Valor expresado en $ARS</strong> correspondiente al monto del equipo en dólares, con la conversión del dólar tipo vendedor del BNA en la fecha de la operación.</p>
           <img src="https://fiter.com/images/fiter/ahora12-promo.png" width="200px"></img>
           <p>Pagá tu producto en 12 cuotas de : $ {valorFinanciado}</p>
