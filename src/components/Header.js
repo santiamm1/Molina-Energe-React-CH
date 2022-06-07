@@ -7,8 +7,10 @@ const Header = () => {
         <header className="header">
             
             <Link to="/">
-                <img src="/energe-logo.png" alt="Energe"></img>
+                <img src="/energe-logo.png" alt="Energe" width="200px"></img>
+                
             </Link>
+        
        
             <Link to="/carrito" className="linksCarrito">
                 <CartWidget/>

@@ -27,10 +27,10 @@ const ItemDetailContainer = () => {
         .finally(()=>{})
         
         
-           
+
     },[id]);
 
-   
+
     if(cargando){
         return(
             <h2>Cargando detalles...</h2>

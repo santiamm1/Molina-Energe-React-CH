@@ -6,7 +6,7 @@ import {collection,query,where,getDocs} from "firebase/firestore"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
- 
+
 toast.success('Cargando productos', {
     position: "top-center",
     autoClose: 2,
@@ -46,45 +46,39 @@ const ItemListContainer = () => {
         })
         .catch((error)=>{})
         .finally(()=>{})
-      }
-      else{
-           const productosCollection = collection(db,"productos");
-           const data = query(productosCollection,where('categorias','==',nombreCategoria));
-           const datos = getDocs(data)
+        }
+        else{
+                const productosCollection = collection(db,"productos");
+                const data = query(productosCollection,where('categorias','==',nombreCategoria));
+                const datos = getDocs(data)
 
-           console.log(datos)
-        datos
-        .then((resultado)=>{
-            const result = resultado.docs.map(doc => {
-                return {...doc.data(),id: doc.id}
-            }
+
+            datos
+            .then((resultado)=>{
+                const result = resultado.docs.map(doc => {
+                    return {...doc.data(),id: doc.id}
+                }
+                )
+                console.log(result)
+                setCargando(false)
+                setProducto(result)
+            })
+            .catch((error)=>{})
+            .finally(()=>{})
+        }    
+        },[nombreCategoria])
+
+        if(cargando){
+            return(
+                <ToastContainer/>
+                
             )
-            console.log(result)
-            setCargando(false)
-            setProducto(result)
-        })
-        .catch((error)=>{})
-        .finally(()=>{})
-    
-    
-    
-    
-      }
-    
-    
-    
-    
-      },[nombreCategoria])
-
-    if(cargando){
-        return(
-            <ToastContainer/>
-            
-        )
-    } else{
-        return (
-            <Itemlist productos={productos}/> 
-        )}
-}
+        } else{
+            return (
+                
+                <Itemlist productos={productos}/> 
+                
+            )}
+    }
 
 export default ItemListContainer

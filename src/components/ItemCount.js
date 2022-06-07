@@ -20,41 +20,43 @@ const ItemCount = ({ init, stock, onAdd , onCount}) => {
 
     onAdd(contador);
     console.log(contador);
-    setConfirmado(false);
+    setConfirmado(true);
     
     };
 
   const cerrarConfirmado = () => {
     onCount()
-    setConfirmado(false);
+    setConfirmado(true);
   };
 
   if (!confirmado) {
     return (
-      <div>
-        <div className="">
-          <button onClick={sumar} className="material-icons botonSuma btn-secondary">add</button>
-          <p><strong>Unidades a comprar :</strong> {contador}</p>
-          <button onClick={restar} className="material-icons botonSuma btn-secondary">remove</button>
-        </div>
-        <div>
-        <button onClick={confirmar} className="botonSuma btn-secondary">Confirmar</button>
-        </div>
+      <div className="panelContador">
+          <div>
+            <button onClick={sumar}>+ Agregar</button>
+            <p><strong>Unidades a comprar :</strong> {contador}</p>
+            <button onClick={restar}>- Quitar</button>
+          </div>
+  
+          <button onClick={confirmar}>Confirmar</button>
+      
         
     </div>
     );
   } else {
     return (
-      <div>
-        <div className="">
-          <button onClick={sumar} className="material-icons botonSuma btn-secondary">add</button>
+      <div className="panelContador">
+        <div>
+          <button onClick={sumar}>+ Agregar</button>
           <p className="cantidad"><strong>Unidades a comprar :</strong> {contador}</p>
-          <button onClick={restar}className="material-icons botonSuma btn-secondary">remove</button>
+          <button onClick={restar}>- Quitar</button>
         </div>
-        <button onClick={confirmar} className="botonSuma btn-secondary">Confirmar</button>
-        <div id="confirmacion_bloque">
+        <div>
+        <button onClick={confirmar}>Confirmar</button>
+        </div>
+        <div>
         <p id="confirmacion"><strong>Se confirmaron: {contador} unidades!</strong>
-        <button onClick={cerrarConfirmado} className="botonSuma btn-secondary m-1">Cerrar</button>
+        <button onClick={cerrarConfirmado}>Cerrar</button>
         </p>
         </div>
      

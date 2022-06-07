@@ -77,10 +77,10 @@ if(!verContador) {
          </div>
          <div className="col-sm-6">
                 <h2><strong>{producto.nombre}</strong></h2> 
-                <p><strong>Detalles: </strong>{producto.detalles}</p>
-                <p><strong>Funcionamiento: </strong>{producto.funcionamiento}</p>
+                <p><strong>Detalles:</strong>{producto.detalles}</p>
+                <p><strong>Funcionamiento:</strong>{producto.funcionamiento}</p>
                 <h3><strong>Precio:$</strong> {producto.precio}</h3>
-                <img src="https://www.nopcommerce.com/images/thumbs/0006813_mercadopago-checkout-latam-tecnofin.png" width="200px"></img>
+                <img src="https://colchonesamalfi.com.ar/wp-content/uploads/2020/12/logoahora12.png" width="200px"></img>
          </div>
          <div  className="col-sm-2">
                 <div>

@@ -2,7 +2,7 @@ import ItemListContainer  from "./ItemListContainer"
 import ItemDetailContainer from "./ItemDetailContainer"
 import Cart from "./Cart"
 import {Routes, Route} from "react-router-dom"
-import FinalCompra from "./FinalCompra"
+import FinalCompra from "./finalCompra"
 import Contacto from  "./Contacto"
 
 
