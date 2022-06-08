@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 toast.success('Cargando productos', {
     position: "top-center",
-    autoClose: 2,
+    autoClose: 6000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,

@@ -5,6 +5,7 @@ import { contexto } from "./AppContext";
 
 
 
+
 const Cart = () => {
   const { cart, clearCart } = useContext(contexto);
   const [precioTotal,setPrecioTotal]= useState()
@@ -34,20 +35,20 @@ useEffect(()=>{
             </div>
           )}
     
-          <div className="contenedorItemComprados">
+          <div className="ItemComprados">
             <CartList    carrito={cart} />
     
             <div className="botoneraFinal">
-
+            <img src="https://cdn-icons-png.flaticon.com/512/3039/3039418.png" width="50px"></img>
             <h3 id="precioTotal"><strong>Precio Total:$ {precioTotal}</strong></h3> 
             <p>Te recordamos que las operaciones por el canal e-commerce tienen 5 días hábiles para procesamiento.</p>
             <p>Cualquier eventualidad durante el proceso. <strong>Por favor enviar el reclamo a ventas@energe.com.ar</strong></p>
             
               <div>
               <button  onClick={() => {clearCart()}}>Vaciar Carrito</button>
-              <Link to="/"><button className="volverInicio">{cart.length === 0 ? "Ir a Comprar" : "Continuar comprando"}</button>
+              <Link to="/"><button>{cart.length === 0 ? "Ir a Comprar" : "Continuar comprando"}</button>
               </Link>
-              <Link to="/productos/finalizarCompra"><button className="finalizarCompra">Finalizar Compra</button></Link>
+              <Link to="/productos/finalizarCompra"><button>Finalizar Compra</button></Link>
               </div>  
               
                         

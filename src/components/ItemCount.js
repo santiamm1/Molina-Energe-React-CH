@@ -32,30 +32,31 @@ const ItemCount = ({ init, stock, onAdd , onCount}) => {
   if (!confirmado) {
     return (
       <div className="panelContador">
-          <div>
-            <button onClick={sumar}>+ Agregar</button>
-            <p><strong>Unidades a comprar :</strong> {contador}</p>
-            <button onClick={restar}>- Quitar</button>
+          <div className="panelContadorBloqueA">
+          <img src="https://cdn-icons-png.flaticon.com/512/709/709484.png" width="60px" onClick={sumar}></img>
+          <p className="cantidad"><strong>Unidades a comprar :</strong> {contador}</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/66/66889.png" width="60px" onClick={restar}></img>
           </div>
-  
-          <button onClick={confirmar}>Confirmar</button>
-      
+          <div className="panelContadorBloque">
+          <button onClick={confirmar}><img src="https://cdn-icons-png.flaticon.com/512/7708/7708160.png" width="50px"></img>Confirmar</button>
+          </div>
+
         
     </div>
     );
   } else {
     return (
       <div className="panelContador">
-        <div>
-          <button onClick={sumar}>+ Agregar</button>
+        <div className="panelContadorBloqueA">
+          <img src="https://cdn-icons-png.flaticon.com/512/709/709484.png" width="60px" onClick={sumar}></img>
           <p className="cantidad"><strong>Unidades a comprar :</strong> {contador}</p>
-          <button onClick={restar}>- Quitar</button>
+          <img src="https://cdn-icons-png.flaticon.com/512/66/66889.png" width="60px" onClick={restar}></img>
         </div>
-        <div>
-        <button onClick={confirmar}>Confirmar</button>
+        <div className="panelContadorBloque">
+        <button onClick={confirmar}><img src="https://cdn-icons-png.flaticon.com/512/7708/7708160.png" width="50px"></img>Confirmar</button>
         </div>
-        <div>
-        <p id="confirmacion"><strong>Se confirmaron: {contador} unidades!</strong>
+        <div className="panelContadorBloque">
+        <p id="confirmacion"><strong>¡Felicitaciones!</strong>Se confirmaron: {contador} unidades!
         <button onClick={cerrarConfirmado}>Cerrar</button>
         </p>
         </div>

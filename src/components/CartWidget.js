@@ -5,7 +5,6 @@ import {contexto} from "./AppContext"
 const CartWidget = () => {
     
     const {cart} = useContext(contexto)
-    console.log(cart)
     return (
     <div className="seccionCarrito">
         <span className="material-symbols-outlined">

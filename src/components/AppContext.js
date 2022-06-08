@@ -17,12 +17,7 @@ const AppContext = ({children}) => {
 
     const isInCart = (id)=>{
         return cart.find(  producto  => producto.item.id === id);
-        }
-
-
-        
-
-      
+        }  
  
     const addItem = (item,quantity) => {
 
@@ -49,10 +44,6 @@ const AppContext = ({children}) => {
     const carroVacio = ()=>{
         setCart([])
     }
-    
-    
-    
-
 
     return (           
         <Provider value={{ cart , addItem , carroVacio, removeItem ,isInCart }}> 
