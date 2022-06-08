@@ -41,12 +41,12 @@ const AppContext = ({children}) => {
         setCart(newCart);
     }
     
-    const carroVacio = ()=>{
+    const clearCart = ()=>{
         setCart([])
     }
 
     return (           
-        <Provider value={{ cart , addItem , carroVacio, removeItem ,isInCart }}> 
+        <Provider value={{ cart , addItem , clearCart, removeItem ,isInCart }}> 
             {children}
         </Provider>
     );
