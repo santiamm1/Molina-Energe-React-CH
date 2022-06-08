@@ -1,4 +1,4 @@
-<h1>E-commrece Energe</h1>
+<h1>E-commerce Energe</h1>
 
 <strong>Proyecto final para el curso de React</strong>.<br>
 Empresa elegida para el proyecto ENERGE, empresa especializada en comercializar soluciones a base de Energía solar con más de 15 años de experiencia en el mercado.<br>
