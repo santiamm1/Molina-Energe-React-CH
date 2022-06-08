@@ -12,13 +12,13 @@ https://www.youtube.com/embed/SrjqlYaws6c <br>
 
 <strong>Consideraciones</strong>:
 
--Para este proyecto se utilizó como práctica, la instalización y renderización de una app vía <strong>React</strong>.<br>
-Se relizó la instalación del webpack con sus correspondientes dependencias.
+-Para este proyecto se utilizó como práctica, la instalación y renderización de una app vía <strong>React</strong>.<br>
+Se relizó la instalación de webpack con sus correspondientes dependencias.
 
--Los datos correspondientes a los productos, se encuentran en una base datos creada a través de <strong>Firebase</strong>. Como así también se realizó la configuración para que los datos correspondientes a los formularios, se guarden en una base aparte. 
+-Los datos correspondientes a los productos, se encuentran en una base datos creada a través de: <strong>Firebase</strong>. Como así también se realizó la configuración para que los datos provenientes de los formularios, se guarden en una base aparte. 
   
   
--Para el maquetado estético, únicamente se utilizó <strong>CSS</strong>.<br>
+-Para el maquetado estético, se utilizó <strong>CSS</strong> y en algunas secciones los grids de Bootstrap.<br>
 -En cuanto a la <strong>navegalibidad</strong>, podemos recorrer adistintas secciones de la página para ver los distitnos productos y el detalle correspondiente a cada uno.<br>
 
 
